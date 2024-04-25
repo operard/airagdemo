@@ -48,7 +48,7 @@ For Windows, and step-by-step instructions for Mac/Linux, please see the [Oracle
 8. Once the "redbullhol" compartment is selected, you should see a running Instance in the list. The address you'll need to access it is in the *Public IP* column. Copy the IP address shown.
 
     ![Public IP](./docs/red-bull-hol-2d-instances-public-ip.jpg)
-9. Next, open a new tab in your browser to load up the web UI for Chatbot Lab. Paste the IP address you just copied with `:8888` added to the end. The URL should look like `https://xxx.xxx.xxx.xxx:8501` (substituting the public IP we copied in the previous step). Chatbot Lab is running on port 8888, so when you navigate to this URL you should see the Juypter login.
+9. Next, open a new tab in your browser to load up the web UI for Chatbot Lab. Paste the IP address you just copied with `:8501` added to the end. The URL should look like `https://xxx.xxx.xxx.xxx:8501` (substituting the public IP we copied in the previous step). Chatbot Lab is running on port 8501, so when you navigate to this URL you should see the Juypter login.
 
     _**Note:** You should not be on VPN when opening Chatbot Lab._
 
