@@ -20,9 +20,9 @@ For Windows, and step-by-step instructions for Mac/Linux, please see the [Oracle
 
 ## Getting Started
 
-1. Click the button below to begin the deploy of the Data Science stack and custom image:
+1. Click the button below to begin the deploy of the AI RAG Demo stack and custom image:
     
-    <a href="https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/oracle-devrel/redbull-analytics-hol/releases/latest/download/redbull-analytics-hol-latest.zip" target="_blank"><img src="https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg" alt="Deploy to Oracle Cloud"/></a>
+    <a href="https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/operard/airagdemo/releases/download/v1.0.0/demoai.zip" target="_blank"><img src="https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg" alt="Deploy to Oracle Cloud"/></a>
 2. If needed, log into your account. You should then be presented with the **Create Stack** page. 
     
     These next few steps will deploy a stack to your OCI tenancy. This will include a Compute instance and the necessary tools to deploy and run Jupyter Lab from within your OCI account.
@@ -48,7 +48,7 @@ For Windows, and step-by-step instructions for Mac/Linux, please see the [Oracle
 8. Once the "redbullhol" compartment is selected, you should see a running Instance in the list. The address you'll need to access it is in the *Public IP* column. Copy the IP address shown.
 
     ![Public IP](./docs/red-bull-hol-2d-instances-public-ip.jpg)
-9. Next, open a new tab in your browser to load up the web UI for Jupyter Lab. Paste the IP address you just copied with `:8888` added to the end. The URL should look like `https://xxx.xxx.xxx.xxx:8888` (substituting the public IP we copied in the previous step). Jupyter Lab is running on port 8888, so when you navigate to this URL you should see the Juypter login.
+9. Next, open a new tab in your browser to load up the web UI for Jupyter Lab. Paste the IP address you just copied with `:8888` added to the end. The URL should look like `https://xxx.xxx.xxx.xxx:8501` (substituting the public IP we copied in the previous step). Jupyter Lab is running on port 8888, so when you navigate to this URL you should see the Juypter login.
 
     _**Note:** You should not be on VPN when opening Jupyter Lab._
 
@@ -91,8 +91,8 @@ To see the results of the lab, you'll need to start the web server using Termina
         cd /home/opc/redbull-analytics-hol/beginners/web
         source /home/opc/redbullenv/bin/activate
         python3 app.py
-3. Open a web browser to the public IP of your Jupyter Lab, but use port 8888 instead of port 8001:
+3. Open a web browser to the public IP of your Chatbot RAG Demo AI, but use port 8501:
 
-        https://xxx.xxx.xxx.xxx:8888
+        http://xxx.xxx.xxx.xxx:8501
 
-    The Public IP is the one at which you're currently accessing Jupyter Lab, which we copied from the Running Instances step above.
+    The Public IP is the one at which you're currently accessing Chatbot, which we copied from the Running Instances step above.
