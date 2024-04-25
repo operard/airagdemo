@@ -6,7 +6,7 @@ AI RAG Demo with Cohere and Oracle Generative AI
 
 You'll need an OCI free trial account (<a href="https://signup.cloud.oracle.com/?sourceType=_ref_coc-asset-opcSignIn&language=en_US" target="_blank" title="Sign up for free trial">click here to sign up</a>). We're going to use a ready-to-go image to install the required resources, so all you need to start is a free account.
 
-Registered lab participants should have received $300 in credits to use for Data Science operations.
+Registered lab participants should have received $300 in credits to use for AI RAG VM operations.
 
 ### SSH Key
 
@@ -25,7 +25,7 @@ For Windows, and step-by-step instructions for Mac/Linux, please see the [Oracle
     <a href="https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/operard/airagdemo/releases/download/v1.0.0/demoai.zip" target="_blank"><img src="https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg" alt="Deploy to Oracle Cloud"/></a>
 2. If needed, log into your account. You should then be presented with the **Create Stack** page. 
     
-    These next few steps will deploy a stack to your OCI tenancy. This will include a Compute instance and the necessary tools to deploy and run Jupyter Lab from within your OCI account.
+    These next few steps will deploy a stack to your OCI tenancy. This will include a Compute instance and the necessary tools to deploy and run Chatbot Lab from within your OCI account.
 
     Under *Stack Information* (the first screen), check the box *I have reviewed and accept the Oracle Terms of Use*. Once that box is checked, the information for the stack will be populated automatically.
     
@@ -48,20 +48,20 @@ For Windows, and step-by-step instructions for Mac/Linux, please see the [Oracle
 8. Once the "redbullhol" compartment is selected, you should see a running Instance in the list. The address you'll need to access it is in the *Public IP* column. Copy the IP address shown.
 
     ![Public IP](./docs/red-bull-hol-2d-instances-public-ip.jpg)
-9. Next, open a new tab in your browser to load up the web UI for Jupyter Lab. Paste the IP address you just copied with `:8888` added to the end. The URL should look like `https://xxx.xxx.xxx.xxx:8501` (substituting the public IP we copied in the previous step). Jupyter Lab is running on port 8888, so when you navigate to this URL you should see the Juypter login.
+9. Next, open a new tab in your browser to load up the web UI for Chatbot Lab. Paste the IP address you just copied with `:8888` added to the end. The URL should look like `https://xxx.xxx.xxx.xxx:8501` (substituting the public IP we copied in the previous step). Chatbot Lab is running on port 8888, so when you navigate to this URL you should see the Juypter login.
 
-    _**Note:** You should not be on VPN when opening Jupyter Lab._
+    _**Note:** You should not be on VPN when opening Chatbot Lab._
 
-    ![Jupyter Login](./docs/red-bull-hol-3b-jupyter-login.jpg)
-10. Log in with the jupyter token and assign a password like `Redbull1`.
-11. You should now see the Jupyter Lab. Navigate in the sidebar to `/redbull-analytics-hol/beginners/` to see the Jupyter notebooks for this lab.
+    ![Chatbot Login](./docs/red-bull-hol-3b-jupyter-login.jpg)
+10. Log in with the Chatbot token and assign a password like `Redbull1`.
+11. You should now see the Chatbot Lab. Navigate in the sidebar to `/redbull-analytics-hol/beginners/` to see the Chatbot notebooks for this lab.
 
 The notebooks are numbered and you'll progress through them in order. These will walk you through collecting and analyzing the data we'll use to predict some races.
 
 
-## Using the Jupyter Lab
+## Using the Chatbot Lab
 
-The Jupyter notebooks are ordered by number, and you'll progress through them in sequence. 
+The Chatbot notebooks are ordered by number, and you'll progress through them in sequence. 
 
 All of the data and models for this lab are already stored in this directory. You can run the notebooks to see what they do, but it's not required to see the finished product. Note that running the notebook `04.ML_Modelling` takes about 40 minutes, so if you want to play with it, save it until after the live lab.
 
