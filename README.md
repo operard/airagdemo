@@ -21,6 +21,7 @@ For Windows, and step-by-step instructions for Mac/Linux, please see the [Oracle
 ## Getting Started
 
 1. Click the button below to begin the deploy of the AI RAG Demo stack and custom image:
+
     [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/operard/airagdemo/releases/download/v1.0.0/demoai.zip)
 
 2. If needed, log into your account. You should then be presented with the **Create Stack** page. 
