@@ -24,17 +24,26 @@ podman pull docker.io/operard/airagdemo:1.0.0.0.0
 ```
 
 
+## Executing The AI RAG Demo in Docker or Podman
+
+
+
+    You must execute the docker image in your podman like this:
+
+```Code
+
+podman run -d -p 8501:8501 --name airagdemo docker.io/operard/airagdemo:1.0.0.0.0
+
+```
+
+
+
 ## Starting The Web Application
 
 To see the results of the lab, you'll need to start the web server using Terminal.
 
 1. In the menu at the top of the page, select **File->New->Terminal**.
-2. Enter the following commands, hitting return after each one (feel free to copy and paste)
-
-        cd /home/opc/redbull-analytics-hol/beginners/web
-        source /home/opc/redbullenv/bin/activate
-        python3 app.py
-3. Open a web browser to the public IP of your Chatbot RAG Demo AI, but use port 8501:
+2. Open a web browser to the public IP of your Chatbot RAG Demo AI, but use port 8501:
 
         http://xxx.xxx.xxx.xxx:8501
 
