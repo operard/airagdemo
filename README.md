@@ -83,16 +83,7 @@ To see the results of the container, you'll need to start the web server using y
 
     The Public IP is the one at which you're currently accessing Chatbot, which we copied from the Running Instances step above.
 
+3. Check the tutorial
 
-## Tutorial to use the service using OCI Generative AI Service
-
-
-Check the next slide to explain the sequences to use the service:
-
-![First Access](./images/Slide4.png)
-
-It is a conversation with AI RAG Demo and you can continue to extend all your questions:
-
-![Next Access](./images/Slide5.png)
-
+    [Tutorial](./tutorial.md)
 
