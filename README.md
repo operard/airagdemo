@@ -20,7 +20,7 @@ You can find the information [here](./installvmragdemo.md)
 
 3. Deploy **AI RAG Demo Docker** page. 
     
-    You must download the docker image in your podman, use next command:
+You must download the docker image in your podman, use next command:
 
 ```Code
 
@@ -28,7 +28,7 @@ podman pull docker.io/operard/airagdemo:1.0.0.0.0
 
 ```
 
-    If you must download the docker image in your docker with colima, use next command:
+If you must download the docker image in your docker with colima, use next command:
 
 ```Code
 
@@ -57,11 +57,9 @@ key_file=ssh-key-xxxxxxxx
 
 chmod 400 ssh-key-xxxxxxxx
 
-
 ```
 
-
-    You must execute the docker image in your podman or docker in order to use your OCI Config File like this:
+You must execute the docker image in your podman or docker in order to use your OCI Config File like this:
 
 ```Code
 
