@@ -63,5 +63,5 @@ To see the results of the container, you'll need to start the web server using y
 
 3. Check the tutorial
 
-    [Tutorial](./tutorial.md)
+    [Tutorial](./tutorial_llama3.md)
 
