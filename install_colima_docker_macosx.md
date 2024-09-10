@@ -34,6 +34,8 @@ Now, install Colima container runtime and Docker if not already installed on you
 brew --version
 
 brew install colima docker
+brew install docker-compose
+brew reinstall qemu
 ```
 
 You could see next results:
@@ -49,6 +51,15 @@ Or, if you don't want/need a background service you can just run:
   /opt/homebrew/opt/colima/bin/colima start -f
 
 ```
+
+Restart colima
+
+```Code
+
+brew services restart colima
+
+```
+
 
 Check the installation:
 

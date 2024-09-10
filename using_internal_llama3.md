@@ -40,12 +40,12 @@ You must execute the docker image in your podman or docker in order to use your 
 
 ```Code
 
-podman run -d -p 8501:8501 -p 11434:11434 -v $PWD:/root --name airaginbox docker.io/operard/airaginbox:1.0.0.0.0
+podman run -d -p 8501:8501 -p 11434:11434  --name airaginbox docker.io/operard/airaginbox:1.0.0.0.0
 
 
 or 
 
-docker run -d -p 8501:8501 -p 11434:11434 -v $PWD:/root  --name airaginbox docker.io/operard/airaginbox:1.0.0.0.0
+docker run -d -p 8501:8501 -p 11434:11434  --name airaginbox docker.io/operard/airaginbox:1.0.0.0.0
 
 ```
 
