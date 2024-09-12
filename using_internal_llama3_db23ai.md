@@ -73,7 +73,7 @@ docker exec -it 23aidb sqlplus PDBADMIN/<pwd>@FREEPDB1
 
 4. Deploy **AI RAG in a BOX Demo Docker** page. 
     
-You must download the docker image in your podman, use next command:
+You must download the docker image in your podman in MAC OSX INTEL, use next command:
 
 ```Code
 
@@ -81,7 +81,7 @@ podman pull docker.io/operard/airagdb23ai:1.0.0.0.0
 
 ```
 
-If you must download the docker image in your docker with colima, use next command:
+If you must download the docker image in your docker with colima in MAC OSX Ma/M2/M3, use next command:
 
 ```Code
 
