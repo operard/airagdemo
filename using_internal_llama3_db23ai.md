@@ -151,3 +151,33 @@ To see the results of the container, you'll need to start the web server using y
 
     [Tutorial](./tutorial_llama3.md)
 
+
+## ReStarting the containers after a reboot of your pc
+
+Start colima
+
+```Code
+
+colima start
+
+```
+
+check docker images
+
+```Code
+
+docker images
+
+docker ps
+
+docker ps -a
+
+docker start 23aidb
+
+docker logs -f 23aidb
+
+docker start airagdb23aiinbox
+
+```
+
+
