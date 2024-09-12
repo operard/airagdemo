@@ -5,7 +5,7 @@ AI RAG in a BOX Demo using Internal LLM Engine could be deployed in PODMAN/DOCKE
 
 ## AI RAG in a BOX Deployment Using LLAMA3 Engine in PODMAN
 
-1. If you must install podman in your MAC OSX M1, Click the next link:
+1. If you must install podman in your MAC OSX INTEL, Click the next link:
 
     [Deploy Podman in your MAC](./install_podman_macosx.md)
 
