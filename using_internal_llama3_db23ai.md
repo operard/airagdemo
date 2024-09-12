@@ -92,17 +92,31 @@ docker pull docker.io/operard/airagdb23ai:1.0.0.0.0
 
 ## Executing The **AI RAG in a BOX Demo Docker** using internal LLM Engine like OLLAMA
 
+You must create a directory "database", for example (/home/cloud-user/database) and create a file "config.env" with the database configuration:
+
+```Code
+
+# this is the .env file 
+[DATABASE]
+USERNAME=VECDEMO
+PASSWORD=<PWD>
+HOST=10.22.1.12
+PORT=1521
+SERVICE_NAME=FREEPDB1
+TABLE_NAME=AIRAGINBOX
+
+```
+
 
 You must execute the docker image in your podman or docker in order to use your OCI Config File like this:
 
 ```Code
 
-podman run -d -p 8501:8501 -p 11434:11434  --name airagdb23ai docker.io/operard/airagdb23ai:1.0.0.0.0
-
+podman run -d --network airag --ip 10.22.1.11  -p 8501:8501 -p 11434:11434 -v /home/cloud-user/database:/config --name airagdb23aiinbox  docker.io/operard/airagdb23aiinbox:1.0.0.0.0
 
 or 
 
-docker run -d -p 8501:8501 -p 11434:11434  --name airagdb23ai docker.io/operard/airagdb23ai:1.0.0.0.0
+docker run -d --network airag --ip 10.22.1.11  -p 8501:8501 -p 11434:11434 -v /home/cloud-user/database:/config --name airagdb23aiinbox  docker.io/operard/airagdb23aiinbox:1.0.0.0.0
 
 ```
 
