@@ -77,7 +77,7 @@ You must download the docker image in your podman in MAC OSX INTEL, use next com
 
 ```Code
 
-podman pull docker.io/operard/airagdb23ai:1.0.0.0.0
+podman pull docker.io/operard/airagdb23aiinbox:1.0.0.0.0
 
 ```
 
@@ -85,7 +85,7 @@ If you must download the docker image in your docker with colima in MAC OSX Ma/M
 
 ```Code
 
-docker pull docker.io/operard/airagdb23ai:1.0.0.0.0
+docker pull docker.io/operard/airagdb23aiinbox:1.0.0.0.0
 
 ```
 
