@@ -136,6 +136,16 @@ docker run -d --network airag --ip 10.22.1.11  -p 8501:8501 -p 11434:11434 -v $H
 ```
 
 
+Check when your AIRAGINBOX is ready:
+
+```Code
+
+docker logs -f airagdb23aiinbox  
+
+```
+
+
+
 ## Starting The Web Application
 
 To see the results of the container, you'll need to start the web server using your browser Google Chrome, Firefox or Safari.
@@ -150,6 +160,32 @@ To see the results of the container, you'll need to start the web server using y
 3. Check the tutorial
 
     [Tutorial](./tutorial_llama3.md)
+
+
+
+## how to stop the containers 
+
+
+Stop docker containers
+```Code
+
+docker stop airagdb23aiinbox
+
+docker stop 23aidb
+
+docker ps -a
+
+```
+
+Check
+
+Stop colima
+
+```Code
+
+colima stop
+
+```
 
 
 ## ReStarting the containers after a reboot of your pc
