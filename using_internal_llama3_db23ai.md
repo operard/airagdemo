@@ -94,6 +94,15 @@ docker pull docker.io/operard/airagdb23aiinbox:1.0.0.0.0
 
 You must create a directory "database", for example (/home/cloud-user/database) and create a file "config.env" with the database configuration:
 
+```Code 
+mkdir $HOME/database
+
+vi $HOME/database/config.env
+
+```
+
+
+
 ```Code
 
 # this is the .env file 
@@ -110,13 +119,19 @@ TABLE_NAME=AIRAGINBOX
 
 You must execute the docker image in your podman or docker in order to use your OCI Config File like this:
 
+In MAC OSX INTEL:
+
 ```Code
 
-podman run -d --network airag --ip 10.22.1.11  -p 8501:8501 -p 11434:11434 -v /home/cloud-user/database:/config --name airagdb23aiinbox  docker.io/operard/airagdb23aiinbox:1.0.0.0.0
+podman run -d --network airag --ip 10.22.1.11  -p 8501:8501 -p 11434:11434 -v $HOME/database:/config --name airagdb23aiinbox  docker.io/operard/airagdb23aiinbox:1.0.0.0.0
 
-or 
+```
 
-docker run -d --network airag --ip 10.22.1.11  -p 8501:8501 -p 11434:11434 -v /home/cloud-user/database:/config --name airagdb23aiinbox  docker.io/operard/airagdb23aiinbox:1.0.0.0.0
+In MAC OSX M1/M2/M3:
+
+```Code
+
+docker run -d --network airag --ip 10.22.1.11  -p 8501:8501 -p 11434:11434 -v $HOME/database:/config --name airagdb23aiinbox  docker.io/operard/airagdb23aiinbox:1.0.0.0.0
 
 ```
 
