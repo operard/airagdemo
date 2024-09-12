@@ -86,6 +86,7 @@ Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docke
 If you want to deploy containers created in x86_64 architecture, we must start Colima Container Runtime like this: 
 
 ```Code
+# colima start  --arch x86_64 --vm-type=vz --vz-rosetta --mount-type=virtiofs  --memory 8 --cpu 4
 
 colima start  --arch x86_64 --memory 8 --cpu 4
 
@@ -107,11 +108,11 @@ We can confirm the Colima Container Runtime configuration with colima status and
 
 colima status
 
-INFO[0000] colima is running using QEMU                 
-INFO[0000] arch: aarch64                                
-INFO[0000] runtime: docker                              
-INFO[0000] mountType: sshfs                             
-INFO[0000] socket: unix:///Users/operard/.colima/default/docker.sock 
+INFO[0001] colima is running using macOS Virtualization.Framework 
+INFO[0001] arch: x86_64                                 
+INFO[0001] runtime: docker                              
+INFO[0001] mountType: virtiofs                          
+INFO[0001] socket: unix:///Users/operard/.colima/default/docker.sock 
 
 
 
