@@ -14,7 +14,57 @@ AI RAG in a BOX Demo using Internal LLM Engine could be deployed in PODMAN/DOCKE
     [Deploy container x86_64 in your MAC](./install_colima_docker_macosx.md)
 
 
-3. Deploy **AI RAG in a BOX Demo Docker** page. 
+3. Deploy Oracle DB23ai 
+
+
+You must create an internal network:
+
+```Code
+
+docker network create --driver bridge --subnet 10.22.1.0/24 airag
+
+```
+
+Deploy the database
+
+```Code
+
+docker run -d --name 23aidb --network airag --ip 10.22.1.12 -p 1522:1521 \
+container-registry.oracle.com/database/free:latest
+```
+ 
+Configure your USER / PWD to access from AIRAGINBOX 
+
+```Code
+
+docker exec 23aidb ./setPassword.sh <pwd>
+
+docker exec -it 23aidb sqlplus / as SYSDBA
+
+ALTER SESSION SET CONTAINER=FREEPDB1;
+CREATE USER VECDEMO IDENTIFIED BY "<pwd>" DEFAULT TABLESPACE users TEMPORARY TABLESPACE temp QUOTA UNLIMITED ON users;
+GRANT CONNECT, RESOURCE TO VECDEMO;
+GRANT DB_DEVELOPER_ROLE to VECDEMO;
+
+```
+
+Test Your Environment
+
+```Code
+
+docker exec -it 23aidb sqlplus VECDEMO/<pwd>@FREEPDB1
+=> ok
+
+
+docker exec -it 23aidb sqlplus PDBADMIN/<pwd>@FREEPDB1
+=> ok
+```
+
+
+
+
+
+4. Deploy **AI RAG in a BOX Demo Docker** page. 
     
 You must download the docker image in your podman, use next command:
 
