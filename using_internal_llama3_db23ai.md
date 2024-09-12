@@ -33,6 +33,13 @@ docker run -d --name 23aidb --network airag --ip 10.22.1.12 -p 1522:1521 \
 container-registry.oracle.com/database/free:latest
 ```
  
+Check when the database is deployed:
+
+```Code
+docker logs -f 23aidb
+```
+
+
 Configure your USER / PWD to access from AIRAGINBOX 
 
 ```Code
