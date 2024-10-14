@@ -11,7 +11,7 @@ fi
 brew install podman
 
 # Start podman Machine
-podman machine init --cpus 4 --memory=4096
+podman machine init --cpus 4 --memory=8192
 podman machine start
 
 # Test podman
@@ -36,13 +36,14 @@ else
 fi
 
 podman pull $CONTAINERNAME
-podman pull $CONTAINERAIRAG
 
 podman network create --driver bridge --subnet 10.22.1.0/24 airag
 
 podman run -d --name 23aidb --network airag --ip 10.22.1.12 -p 1522:1521 $CONTAINERNAME
 
+podman pull $CONTAINERAIRAG
 
+# Execute check database is UP
 podman logs 23aidb -f | while read LINE; 
 do 
 echo ${LINE}; 

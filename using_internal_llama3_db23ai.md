@@ -16,6 +16,9 @@ This version has included 2 containers:
 
 Use the next [link](https://github.com/containers/podman/blob/main/docs/tutorials/podman-for-windows.md) to deploy PODMAN in Windows
 
+
+Check tutorial for [Windows Installation](./install_win_llama3_db23ai.md).
+
 #### Install containers 
 
 You can deploy in Windows (Intel or ARM64) using next script [Here](./scripts/install_airagdb23ai_win.bat)
