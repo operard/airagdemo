@@ -15,12 +15,12 @@ goto :End
 :EnvSetting
   if "%vArcType%" =="arm64"  (
     echo "The Windows is ARM64."
-    set CONTAINERNAME="docker.io/operard/database:23.5.0-free-arm64"
-    set CONTAINERAIRAG="docker.io/operard/airagdb23aiinbox:1.0.0-arm64"
+    set CONTAINERNAME="fra.ocir.io/frg6v9xlrkul/database:23.5.0-free-arm64"
+    set CONTAINERAIRAG="fra.ocir.io/frg6v9xlrkul/airagdb23aiinbox:1.0.0-arm64"
   ) else (
     echo "The Windows is x86_64 or i386."
     set CONTAINERNAME="container-registry.oracle.com/database/free:latest"
-    set CONTAINERAIRAG="docker.io/operard/airagdb23aiinbox:1.0.0.0.0"
+    set CONTAINERAIRAG="fra.ocir.io/frg6v9xlrkul/airagdb23aiinbox:1.0.0.0.0"
   )
   echo vArcType is           %vArcType%
   echo vOSType  is           %vOSType%

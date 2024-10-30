@@ -27,12 +27,12 @@ CONTAINERAIRAG=""
 # Comprobación del sistema operativo y arquitectura
 if [[ "$(uname -m)" == "arm64" ]]; then
   echo "The Mac OSX is ARM (Apple Silicon)."
-  CONTAINERNAME="docker.io/operard/database:23.5.0-free-arm64"
-  CONTAINERAIRAG="docker.io/operard/airagdb23aiinbox:1.0.0-arm64"
+  CONTAINERNAME="fra.ocir.io/frg6v9xlrkul/database:23.5.0-free-arm64"
+  CONTAINERAIRAG="fra.ocir.io/frg6v9xlrkul/airagdb23aiinbox:1.0.0-arm64"
 else
   echo "The Mac OSX is x86_64."
   CONTAINERNAME="container-registry.oracle.com/database/free:latest"
-  CONTAINERAIRAG="docker.io/operard/airagdb23aiinbox:1.0.0.0.0"
+  CONTAINERAIRAG="fra.ocir.io/frg6v9xlrkul/airagdb23aiinbox:1.0.0.0.0"
 fi
 
 podman pull $CONTAINERNAME

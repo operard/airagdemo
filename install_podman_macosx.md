@@ -175,3 +175,47 @@ podman machine reset
 ```
 
 
+
+
+podman machine stop podman-machine-default
+podman machine set -m 4096 podman-machine-default
+podman machine start podman-machine-default
+
+
+podman build -t localhost/database:23.5.0-free-arm64 -f Containerfile.free .
+
+podman tag localhost/database:23.5.0-free-arm64 operard/database:23.5.0-free-arm64
+
+podman push operard/database:23.5.0-free-arm64
+
+
+
+podman network create --driver bridge --subnet 10.22.1.0/24 airag
+
+podman run -d --name 23aidb --network airag --ip 10.22.1.12 -p 1522:1521 \
+localhost/database:23.5.0-free-arm64
+
+
+
+CREATE USER VECDEMO IDENTIFIED BY "Oracle4U" DEFAULT TABLESPACE users TEMPORARY TABLESPACE temp QUOTA UNLIMITED ON users;
+GRANT CONNECT, RESOURCE TO VECDEMO;
+GRANT DB_DEVELOPER_ROLE to VECDEMO;
+
+podman exec -it 23aidb sqlplus VECDEMO/Oracle4U@FREEPDB1
+
+
+
+# En mi PC MAC OSX M1
+
+podman build  -f=Dockerfile --tag=operard/airagdb23aiinbox:1.0.0-arm64 .
+
+podman push operard/airagdb23aiinbox:1.0.0-arm64
+
+operard/airagdb23aiinbox:1.0.0-arm64
+
+
+
+http://sitex.gobex.es/SITEX/calificacionexpedients/mostrardatossectoriales/2794/fd75adaf
+
+
+
