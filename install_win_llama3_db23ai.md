@@ -7,13 +7,19 @@ Here you can see the tutorial to install **Podman Desktop** in Windows.
 
 ![Step 1](./images/win_slide1.png)
 
-## Step 2: chick on SETUP
+## Step 2: Click on SETUP
 
 ![Step 2](./images/win_slide2.png)
 
 ## Step 3: Execute DISM
 
 ![Step 3](./images/win_slide3.png)
+
+Execute DISM Command desde PowerShell:
+
+```Code
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+````
 
 ## Step 4: Execute PODMAN Setup
 
@@ -48,6 +54,15 @@ podman ps
 
 podman images
 ```
+
+Download the images from OCI Repository for x86:
+
+```Code
+podman pull container-registry.oracle.com/database/free:latest
+
+podman pull fra.ocir.io/frg6v9xlrkul/airagdb23aiinbox:1.0.0.0.0
+```
+
 
 ![Step 10](./images/win_slide10.png)
 
