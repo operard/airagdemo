@@ -38,6 +38,42 @@ You can deploy in Mac OSX (Intel or ARM64) using next script [Here](./scripts/in
 You can deploy in Linux (Intel, AMD or ARM64) using next script [Here](./scripts/install_airagdb23ai_linux.sh)
 
 
+### **Checking** Installation
+
+Check if PODMAN network is correctly created:
+
+```Code
+podman network ls
+```
+
+Check if all images have been downloaded:
+
+```Code
+podman images
+```
+
+Check if containers have been started:
+
+```Code
+podman ps
+```
+
+Check if all logs of containers are OK:
+
+```Code
+podman logs -f 23aidb
+
+podman logs -f airagdb23aiinbox
+```
+
+Connect to the database
+
+```Code
+podman exec -it 23aidb sqlplus VECDEMO/<pwd>@FREEPDB1
+```
+
+
+
 ### **Troubleshooting**
 
 
