@@ -82,7 +82,7 @@ goto :EOF
 
 
 :Install_Airag
-  podman run -d --name airagdb23aiinbox --network airag --ip 10.22.1.11  -p 8501:8501  -e dbuser=VECDEMO -e dbpassword=Oracle4U -e dbservice="10.22.1.12:1522/FREEPDB1" -e dbtablename=AIRAGINBOX %CONTAINERAIRAG%
+  podman run -d --name airagdb23aiinbox --network airag --ip 10.22.1.11  -p 8501:8501  -e dbuser=VECDEMO -e dbpassword=Oracle4U -e dbservice="10.22.1.12:1521/FREEPDB1" -e dbtablename=AIRAGINBOX %CONTAINERAIRAG%
   echo "--> AIRAG executed"
 goto :EOF
 
