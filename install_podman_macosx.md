@@ -205,17 +205,3 @@ podman exec -it 23aidb sqlplus VECDEMO/Oracle4U@FREEPDB1
 
 
 
-# En mi PC MAC OSX M1
-
-podman build  -f=Dockerfile --tag=operard/airagdb23aiinbox:1.0.0-arm64 .
-
-podman push operard/airagdb23aiinbox:1.0.0-arm64
-
-operard/airagdb23aiinbox:1.0.0-arm64
-
-
-
-http://sitex.gobex.es/SITEX/calificacionexpedients/mostrardatossectoriales/2794/fd75adaf
-
-
-
